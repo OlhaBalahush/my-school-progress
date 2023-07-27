@@ -1,0 +1,80 @@
+:root {
+    --main-text-font-size: 25px;
+    --color-back: rgb(113, 113, 112, 0.7);
+    --color-background: rgba(177, 177, 167, 0.3);
+    --color-1: rgb(255, 255, 255);
+    --color-pink: #e570a2;
+    --color-blue: #0102ef;
+    --color-text: #2a2b2a;
+
+    --main-text: 'Nunito';
+}
+
+body {
+    font-family: var(--main-text);
+    margin: 0;
+    padding: 0;
+}
+
+#body-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color-background);
+    text-transform: uppercase;
+}
+
+.container {
+    width: 400px;
+    padding: 20px;
+    background-color: var(--color-1);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px var(--color-back);
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    text-transform: none;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: var(--main-text);
+}
+
+.form-group input[type="submit"] {
+    margin-top: 15px;
+    height: 40px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    background-color: var(--color-pink);
+    color: var(--color-1);
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: var(--color-blue);
+    color: var(--color-1);
+    letter-spacing: 0.5px;
+    font-size: 16px;
+}

@@ -1,0 +1,255 @@
+:root {
+    --main-text-font-size: 20px;
+    --color-back: rgb(113, 113, 112, 0.7);
+    --color-background: rgba(177, 177, 167, 0.3);
+    --color-1: rgb(255, 255, 255);
+    --color-pink: #e570a2;
+    --color-blue: #0102ef;
+    --color-text: #2a2b2a;
+
+    --main-text: 'Nunito';
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--main-text);
+    color: var(--color-text);
+    text-transform: uppercase;
+}
+
+p {
+    margin: 10px 40px;
+}
+
+.student-info {
+    background-color: var(--color-1);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 15px 15px;
+    width: 100%;
+    box-shadow: 0 5px 20px var(--color-back);
+    font-size: var(--main-text-font-size);
+}
+
+.chart-container-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.chart-container {
+    width: 50%;
+    box-sizing: border-box;
+    min-height: 150px;
+    max-height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.lb {
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+#container {
+    margin: 25px 50px;
+}
+
+.student-info-containers {
+    display: flex;
+    flex-direction: row;
+}
+
+#main-student-info-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#main-student-info-container :nth-child(1){
+    font-size: 30px;
+}
+
+#img-container {
+    height: 60px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 15px;
+}
+
+#main-info-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+}
+
+#first-row {
+    height: 115px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#userbasic{
+    display: flex;
+    flex-direction: row;
+}
+
+#second-row {
+    min-height: 400px;
+    max-height: 410px
+}
+
+#level-container {
+    min-width: 200px;
+    max-width: 215px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    font-size: var(--main-text-font-size);
+    background-color: var(--color-pink);
+    color: var(--color-1);
+}
+
+#level-num-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: var(--color-1);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: var(--color-text);
+    box-shadow: 0 5px 20px var(--color-back);
+    margin: 15px;
+}
+
+#xp-container {
+    max-height: 400px;
+}
+
+#chart {
+    padding: 60px 20px;
+    padding-top: 0;
+}
+
+#audit-chart {
+    margin: 0 40px;
+}
+
+#third-row {
+    min-height: 320px;
+    max-height: 400px;
+}
+
+#audit-container {
+    max-width: 380px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.button {
+    border-style: none;
+    background-color: transparent;
+    font-size: var(--main-text-font-size);
+    font-family: var(--main-text);
+    width: 150px;
+    text-transform: uppercase;
+    margin: 0 15px;
+    padding: 10px 15px;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: var(--color-pink);
+    color: var(--color-1);
+}
+
+.button:hover {
+    background-color: var(--color-blue);
+    color: var(--color-1);
+    letter-spacing: 0.5px;
+    font-size: 16px;
+}
+
+.graph-container {
+    height: 100%;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+@media only screen and (max-width: 1220px) {
+    #third-row {
+        flex-direction: column;
+        box-sizing: border-box;
+        width: auto;
+        max-height: fit-content;
+    }
+
+    #audit-container {
+        max-width: 100%;
+        max-height: 200px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #first-row{
+        height: auto;
+    }
+
+    .button {
+        margin: 15px 0;
+    }
+
+    #userbasic{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #img-container{
+        height: 150px;
+    }
+
+    #main-student-info-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #main-info-container {
+        align-items: center;
+        margin: 15px 0;
+    }
+
+    #second-row {
+        flex-direction: column;
+        box-sizing: border-box;
+        max-height: fit-content;
+    }
+
+    .student-info {
+        width: auto;
+    }
+
+    #main-student-info-container,
+    #level-container {
+        max-width: 100%;
+    }
+
+    span {
+        text-align: center;
+    }
+}
