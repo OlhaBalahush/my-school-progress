@@ -38,7 +38,7 @@ export async function fetchMainPageContent() {
         const data = await response.json()
         try {
             const user = data.data.user
-    
+
             if (user[0] != null) {
                 generateMain(user[0])
             }
@@ -90,17 +90,6 @@ export function generateMain(user) {
     skillsCont.classList.add('chart-container-wrapper')
     skillsCont.classList.add('graph-container')
 
-    let logoutBtn = document.createElement('button')
-    logoutBtn.className = 'button'
-
-    logoutBtn.addEventListener('click', () => {
-        let token = localStorage.getItem('JWToken')
-        if (token != null && token != undefined) {
-            localStorage.clear();
-            navigateTo('/login')
-        }
-    })
-
     let userbasic = document.createElement('div')
     userbasic.setAttribute('id', 'userbasic')
     let userImgCont = document.createElement('div')
@@ -116,9 +105,8 @@ export function generateMain(user) {
     emailSpan.className = 'lb'
     emailSpan.innerHTML = user.attrs.email
     infoCont.append(usernameSpan, emailSpan)
-    logoutBtn.innerHTML = 'log out'
     userbasic.append(userImgCont, infoCont)
-    userInfo.append(userbasic, logoutBtn)
+    userInfo.append(userbasic)
     studentFirstRowCont.append(userInfo)
 
     let studentLevelCont = document.createElement('div')

@@ -1,4 +1,3 @@
-import { generateLogin } from "./pages/login.js"
 import { fetchMainPageContent } from "./pages/main.js"
 
 export const navigateTo = url => {
@@ -11,10 +10,6 @@ export const router = async () => {
         {
             path: "/",
             view: fetchMainPageContent // TODO change to fetch
-        },
-        {
-            path: "/login",
-            view: generateLogin
         }
     ]
     const urlParts = location.pathname.split("/");
