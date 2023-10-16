@@ -324,7 +324,7 @@ function generateTechnicalSkills(skills) {
     canvasCont.className = 'chart-container'
     var canvas = document.createElement('canvas');
     canvasCont.appendChild(canvas)
-    let technicalSkills = findSkills(skills, ['prog', 'algo', 'front-end', 'back-end', 'stats', 'game'])
+    let technicalSkills = findSkills(skills, ['prog', 'algo', 'sys-admin', 'front-end', 'back-end', 'stats', 'game'])
     generateRadarChart(canvas, technicalSkills)
     let lb = document.createElement('span')
     lb.innerHTML = 'Technical skills'
@@ -338,7 +338,7 @@ function generateTechnologiesSkills(skills) {
     canvasCont.className = 'chart-container'
     var canvas = document.createElement('canvas');
     canvasCont.appendChild(canvas)
-    let technologiesSkills = findSkills(skills, ['go', 'js', 'html', 'css', 'unix', 'docker'])
+    let technologiesSkills = findSkills(skills, ['go', 'js', 'html', 'css', 'unix', 'docker', 'sql', 'python', 'graphql', 'django'])
     generateRadarChart(canvas, technologiesSkills)
     let lb = document.createElement('span')
     lb.innerHTML = 'Technologies skills'
